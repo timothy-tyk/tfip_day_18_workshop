@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculation Result</title>
+  </head>
+  <body data-th-object="${result}">
+    <h1>Love Results</h1>
+    <h2 data-th-text="*{compatibility}"></h2>
+    <p>First Name: <span data-th-text="*{fname}"></span></p>
+    <p>Second Name: <span data-th-text="*{sname}"></span></p>
+    <p>Percentage: <span data-th-text="*{percentage}"></span>%</p>
+    <p>Description: <span data-th-text="*{resultDescription}"></span></p>
+  </body>
+</html>

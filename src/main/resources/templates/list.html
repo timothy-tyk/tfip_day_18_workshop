@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List of Results</title>
+  </head>
+  <body data-th-obj="${results}">
+    <h1>List of Results</h1>
+    <ol>
+      <div data-th-each="result:${results}">
+        <li>
+          <p>
+            <span data-th-text="${result.fname}"></span> &hearts;
+            <span data-th-text="${result.sname}"></span> =
+            <span data-th-text="${result.percentage}"></span>%
+            <br />
+            <a data-th-href="@{${'result/' + result.fname+result.sname}}"
+              >Go to result</a
+            >
+          </p>
+        </li>
+      </div>
+    </ol>
+  </body>
+</html>
